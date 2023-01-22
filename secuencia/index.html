@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>taijutsu de aikido</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family: Helvetica, Arial, sans-serif;
+            }
+
+            a {color:gray;} a:hover{color:silver;}
+
+            header, main, footer {
+                width: 100%;
+                max-width: 600px;
+                margin: 3% auto;
+            }
+
+            header {
+                text-align: center;
+            }
+
+            header h1,
+            header h2,
+            header h3,
+            header h4,
+            header h5,
+            header h6 {
+                line-height: 1;
+                text-transform: uppercase;
+                margin: 0.75rem 0;
+            }
+
+            header h1 {
+                font-size: calc(1.25rem + 1.25vw);
+            }
+
+            header h2 {
+                font-size: calc(1rem + 1vw);
+            }
+
+            header h3 {
+                font-size: calc(0.75rem + 0.75vw);
+            }
+
+            main {
+                line-height: 1.5;
+            }
+
+            main #animation {
+                width: 100%;
+            }
+            main #animation img {
+                display: none;
+                width: 100%;
+                height: auto;
+            }
+            main #animation img:first-child {
+                display: block;
+            }
+
+            main p {
+                margin: 1.5rem 0;
+            }
+
+            main p em {
+                font-style: normal;
+                font-weight: bold;
+            }
+
+            footer {
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h2>suwari waza</h2>
+            <h1>yokomen uchi gokkyo ura</h1>
+            <h3><a href="#">taijutsu de aikido</a></h3>
+        </header>
+        <main>
+            <div id="animation">
+                <img src="img/paso-1.jpg" />
+                <img src="img/paso-2.jpg" />
+                <img src="img/paso-3.jpg" />
+                <img src="img/paso-4.jpg" />
+                <img src="img/paso-5.jpg" />
+                <img src="img/paso-6.jpg" />
+                <img src="img/paso-7.jpg" />
+                <img src="img/paso-8.jpg" />
+                <img src="img/paso-9.jpg" />
+            </div>
+            <p><em>Un párrafo para complementar la secuencia de gráficas figurativas</em>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In congue lobortis est, in mollis mi ornare vitae. Suspendisse potenti. Etiam eu est quis ligula sagittis sollicitudin.</p>
+        </main>
+        <footer>
+            <p><a href="#">Volver al listado de taijutsu de aikido</a></p>
+        </footer>
+        <script>
+            const frames = document.getElementById("animation").children;
+            const frameCount = frames.length;
+            let i = 0;
+            setInterval(function () {
+                frames[i % frameCount].style.display = "none";
+                frames[++i % frameCount].style.display = "block";
+            }, 1000);
+        </script>
+    </body>
+</html>
