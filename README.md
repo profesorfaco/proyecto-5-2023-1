@@ -1,6 +1,7 @@
 # AUD5V001-2
 
-### Proyecto V | Diseño, mención Visualidad y Medios | Universidad de Chile
+### Proyecto V - Sección 2 
+### Diseño, mención Visualidad y Medios | Universidad de Chile
 
 - - - - - - - - - - - 
 
