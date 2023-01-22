@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>DOS GRÁFICAS, NO UNA</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family: Helvetica, Arial, sans-serif;
+                background:black;
+                color:white;
+            }
+
+            a {
+                color: silver;
+            }
+            a:hover {
+                color: gray;
+            }
+
+            header{
+                width: 100%;
+                max-width: 600px;
+                margin: 5% auto 0 auto;
+                text-align: center;
+            }
+
+            header h1,
+            header h2 {
+                line-height: 1;
+                text-transform: uppercase;
+                margin: 1rem 0;
+            }
+
+            header h1 {
+                font-size: calc(1rem + 1vw);
+            }
+
+            header h2 {
+                font-size: calc(1rem + 0.5vw);
+            }
+
+            main {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            @media screen and (orientation: portrait) {
+                .ancho {
+                    display: none;
+                }
+
+                .angosto {
+                    display: normal;
+                }
+            }
+            @media screen and (orientation: landscape) {
+                .ancho {
+                    display: normal;
+                }
+
+                .angosto {
+                    display: none;
+                }
+            }
+
+            footer {
+                width: 100%;
+                max-width: 600px;
+                margin: 5% auto;
+            }
+
+            footer p {
+                line-height: 1.5;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h2>web responsiva</h2>
+            <h1>dos gráficas, no una</h1>
+        </header>
+        <main>
+            <object type="image/svg+xml" data="https://programa-apolo.github.io/infografia-digital/svg/Ruta-movil.svg" class="angosto">
+                Desktop second
+            </object>
+            <object type="image/svg+xml" data="https://programa-apolo.github.io/infografia-digital/svg/Ruta-web.svg" class="ancho">
+                Desktop second
+            </object>
+
+        </main>
+        <footer>
+            <p>Las dos gráficas son tomada de una <a href="https://programa-apolo.github.io/infografia-digital/">infografía digital</a> desarrollada en noviembre de 2022 por Karina Anacona, Javiera Castro, Dominique Rezepka y Catalina Vallejos, estudiantes de Diseño UC.</p>
+        </footer>
+    </body>
+</html>
