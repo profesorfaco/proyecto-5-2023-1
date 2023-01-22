@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Bootstrap demo</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center mt-5 fs-2">RESULTADOS DE EVALUACIÓN</h1>
+                    <h2 class="text-center mb-5 fs-3">(correcta lectura de la referencia)</h2>
+                </div>
+            </div>
+
+            <div class="row pb-5" id="aqui"></div>
+            <!--cierra .row-->
+            <div class="row">
+                <div class="col-12">
+                    <p class="small text-muted text-center">Basado en los resultados para las pruebas de significado de <a href="https://www.guemil.info/">Guemil</a>.</p>
+                </div>
+            </div>
+        </div>
+        <!--cierra .container-->
+
+        <script>
+            const data = [
+                { img: "https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/01_Man_v15.svg", number: 71 },
+                { img: "https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/02_Woman_v15.svg", number: 47 },
+                { img: "https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/05_Group_meeting_v15.svg", number: 65 },
+                { img: "https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/06_Authority_instruction_v15.svg", number: 79 },
+                { img: "https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/07_Evacuate_to_shelter_v15.svg", number: 44 },
+                { img: "https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/09_Emergency_exit_v15.svg", number: 79 },
+                { img: "https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/10_Drop_cover_hold_v15.svg", number: 85 },
+                { img: "https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/11_Evacuate_vertical_v15.svg", number: 71 },
+                { img: "https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/12_Evacuate_downstairs_v15.svg", number: 76 },
+                { img: "https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/14_Use_gloves_v15.svg", number: 65 },
+                { img: "https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/15_Use_mask_v15.svg", number: 55 },
+                { img: "https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/16_Sneeze_in_elbow_v15.svg", number: 83 },
+                { img: "https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/17_Temperature_v15.svg", number: 90 },
+                { img: "https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/18_Wash_hands_v15.svg", number: 99 },
+                { img: "https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/19_Disinfectant_v15.svg", number: 87 },
+                { img: "https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/20_Keep_distance_v15.svg", number: 79 },
+                { img: "https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/23_Evacuate_fire_v15.svg", number: 84 },
+                { img: "https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/26_Warning_tsunami_v15.svg", number: 71 },
+                { img: "https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/29_Flagged_bdg_v15.svg", number: 44 },
+                { img: "https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/31_Lockdown_v15.svg", number: 50 },
+                { img: "https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/32_Shelter_v15.svg", number: 59 },
+                { img: "https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/33_Quarantine_v15.svg", number: 46 },
+                { img: "https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/37_Time_v15.svg", number: 73 },
+                { img: "https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/39_Wipeout_v15.svg", number: 55 },
+                { img: "https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/49_Landslide_v15.svg", number: 84 },
+                { img: "https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/50_Flood_v15.svg", number: 58 },
+                { img: "https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/52_Hurricane_v15.svg", number: 20 },
+                { img: "https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/55_Authority_v15.svg", number: 57 },
+                { img: "https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/56_Meeting_point_v15.svg", number: 70 },
+                { img: "https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/65_Help_others_v15.svg", number: 81 },
+            ];
+            let donde = document.querySelector("#aqui");
+
+            data.forEach((d) => {
+                donde.innerHTML +=
+                    '<article class="col-lg-2 col-md-3 col-sm-4 col-6" data-score="' +
+                    d.number +
+                    '"><svg width="100%" height="100%" viewBox="0 0 42 42"><circle cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle><circle cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#ddd" stroke-width="2"></circle><circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#000000" stroke-width="2" stroke-dasharray="' +
+                    d.number +
+                    " " +
+                    (100 - d.number) +
+                    '" stroke-dashoffset="25"></circle><text x="50%" y="29" dominant-baseline="middle" text-anchor="middle" font-size="7">' +
+                    d.number +
+                    '%</text><image x="15" y="10" width="12" height="12" xlink:href="' +
+                    d.img +
+                    '" /></svg></article>';
+            });
+        </script>
+    </body>
+</html>
