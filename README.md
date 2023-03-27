@@ -7,8 +7,8 @@
 
 Templates para resolver ejercicios:
 
-- https://profesorfaco.github.io/AUD5V001-2/secuencia/
+- https://profesorfaco.github.io/proyecto-5-2023-1/secuencia/
 
-- https://profesorfaco.github.io/AUD5V001-2/responsive/
+- https://profesorfaco.github.io/proyecto-5-2023-1/responsive/
 
-- https://profesorfaco.github.io/AUD5V001-2/pictogramas/
+- https://profesorfaco.github.io/proyecto-5-2023-1/pictogramas/
