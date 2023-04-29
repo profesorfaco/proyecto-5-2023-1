@@ -32,22 +32,23 @@ header {
 }
 
 header h1 {
-    font-size: calc(1rem + 1.2vw);
+    font-size: calc(1rem + 1.5vw);
     margin-bottom: 2rem;
     font-weight:normal;
 }
 
 header h2 {
-    font-size: calc(1rem + 1vw);
+    font-size: calc(1rem + 1.2vw);
     margin: 0.75rem 0;
     font-weight:normal;
 }
 
 header h3 {
-    font-size: calc(1rem + 0.6vw);
+    font-size: calc(1rem + 0.9vw);
     letter-spacing: 0.1rem;
     margin-top: 3rem;
     color: #999;
+    font-weight:normal;
 }
 
 main #animation {
