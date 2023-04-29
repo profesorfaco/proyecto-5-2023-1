@@ -44,7 +44,7 @@ header h2 {
 header h3 {
     font-size: calc(1rem + 0.6vw);
     letter-spacing: 0.1rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
     color: #999;
 }
 
@@ -79,5 +79,6 @@ footer {
 }
 
 footer p {
-    margin: 3rem 0;
+    margin: 3rem 0 2rem 0;
+    font-size:90%;
 }
