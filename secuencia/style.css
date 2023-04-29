@@ -38,13 +38,13 @@ header h1 {
 }
 
 header h2 {
-    font-size: calc(1rem + 1.2vw);
+    font-size: calc(1rem + 1.25vw);
     margin: 0.75rem 0;
     font-weight:normal;
 }
 
 header h3 {
-    font-size: calc(1rem + 0.9vw);
+    font-size: calc(1rem + 1vw);
     letter-spacing: 0.1rem;
     margin-top: 3rem;
     color: #999;
