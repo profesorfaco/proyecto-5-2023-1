@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>index</title>
+        <link href="https://profesorfaco.github.io/proyecto-5-2023-1/secuencia/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h3>AIKIDO</h3>
+            <h2>katate dori</h2>
+            <h1>sankyo omote</h1>
+        </header>
+        <main>
+            <div id="animation">
+                <img src="img/paso-1.jpg" />
+                <img src="img/paso-2.jpg" />
+                <img src="img/paso-3.jpg" />
+                <img src="img/paso-4.jpg" />
+                <img src="img/paso-5.jpg" />
+                <img src="img/paso-6.jpg" />
+                <img src="img/paso-7.jpg" />
+                <img src="img/paso-8.jpg" />
+                <img src="img/paso-9.jpg" />
+                <img src="img/paso-10.jpg" />
+                <img src="img/paso-11.jpg" />
+                <img src="img/paso-12.jpg" />
+            </div>
+            <p>Saber contar historias mediante una secuencia de imágenes constituye una habilidad inestimable no solo para cineastas, dibujantes de cómics y novelistas gráficos, tino también para todo diseñador que trabaje con el tiempo y la interactividad. El propósito de un <em>storyboard</em> consiste en explicar acciones con una serie de imágenes concisas. Para desarrollar un <em>storyboard</em>, los diseñadores tiene que planear el arco de una narración y decidir cómo resumir esa historia en un número limitado de fotogramas (Lupton, 2021, p.34).</p>
+        </main>
+        <footer>
+            <p><a href="https://www.u-cursos.cl/fau/2023/1/AUD5V001/2/datos_curso/">AUD5V001-2 Primer Semestre 2023</a></p>
+        </footer>
+        <script>
+            const frames = document.getElementById("animation").children;
+            const frameCount = frames.length;
+            let i = 0;
+            setInterval(function () {
+                frames[i % frameCount].style.display = "none";
+                frames[++i % frameCount].style.display = "block";
+            }, 1000);
+        </script>
+    </body>
+</html>
