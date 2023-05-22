@@ -1,16 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&display=swap");
 :root {
     --bs-body-font-family: "Work Sans", sans-serif;
-    --bs-link-color-rgb: 191, 54, 12;
-    --bs-link-hover-color-rgb: 255, 61, 0;
+    --bs-link-color-rgb: 255, 61, 0;
+    --bs-link-hover-color-rgb: 213, 0, 0;
 }
 .display-1 {
     font-weight: 300;
-    font-size: calc(1.625rem + 4vw);
+    font-size: calc(1.625rem + 3.625vw);
 }
 .display-2 {
     font-weight: 300;
-    font-size: calc(1.625rem + 3vw);
+    font-size: calc(1.625rem + 2.625vw);
 }
 a {
     text-decoration: none;
