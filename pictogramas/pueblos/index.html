@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>RESULTADOS DE EVALUACIÓN | PROYECTO V | SECCIÓN 2</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+        <link href="../style.css" rel="stylesheet" />
+    </head>
+    <body class="bg-light-subtle">
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-12">
+                    <h1 class="text-center display-1">PUEBLOS</h1>
+                    <h2 class="text-center fs-4"><a href="../index.html">RESULTADOS DE EVALUACIÓN</a></h2>
+                    <h3 class="text-center my-3 fs-5">Cuánto se ha mentado lo que debía ser figurado o designado*</h3>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-4 pt-1 pb-4" id="aqui"></div>
+        </div>
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-xxl-6 col-xl-7 col-lg-8 col-md-9 col-sm-10 col-11 mx-auto">
+                    <h3 class="fs-5">* Consideremos cuatro ideas:</h3>
+                    <p><em>Primera idea</em>. Podemos diferenciar, con Husserl, a la percepción de la representación simbólica-figurativa o simbólica-signitiva.</p>
+                    <p class="text-body-secondary">
+                        Entre PERCEPCIÓN, de una parte, y REPRESENTACIÓN SIMBÓLICA-FIGURATIVA o SIMBÓLICA-SIGNITIVA, de otra parte, hay una infranqueable diferencia esencial. En estas especies de representaciones intuimos algo con la
+                        conciencia de que figura o indica signitivamente algo distinto; teniendo lo uno en el campo de la intuición, no nos dirigimos a ello, sino, a través del medio de un aprehender fundado, a lo otro, a lo figurado o lo
+                        designado. En la percepción no se puede hablar de nada semejante, como tampoco en el recuerdo simple o la fantasía simple (Husserl, 2013, p.171).
+                    </p>
+                    <p><em>Segunda idea</em>. Puesto de otro modo, y también con Husserl, podemos diferenciar presentación propia, imagen y signo.</p>
+                    <p class="text-body-secondary">
+                        El signo no tiene, generalmente, con lo designado nada de común en su contenido […] La imagen, por contrario, se refiere a la cosa por semejanza, y si esta falta, ya no puede hablarse de imagen. El signo, en cuanto
+                        objeto, se constituye para nosotros en el acto de aparecer. Este acto no es todavía un acto designativo; necesita […] enlazarse […] con un nuevo modo de aprehensión, por medio del cual es mentado […] el objeto
+                        designado. También la imagen, por ejemplo el busto mármol, es una cosa como otra cualquiera; únicamente el nuevo modo de aprehensión hace de ella una imagen; entonces no aparecer meramente la cosa de mármol, sino que
+                        a la vez es mentada imaginativamente una persona, sobre la base de esta apariencia (Husserl, 2009, pp. 636-637)
+                    </p>
+                    <p>
+                        <em>Tercera idea</em>. La representación simbólica puede ser figurativa o signitiva. Podemos referirnos a tales representaciones, respectivamente, como imagen o signo. Pero sólo una reducción arbitraria del concepto
+                        de signo puede negar que las imágenes también lo sean.
+                    </p>
+                    <p class="text-body-secondary">
+                        Un objeto visible sólo se convierte en imagen cuando se convierte en signo de lo que acontece en su superficie. Un objeto visible sólo se convierte en imagen cuando su superficie es captada por los observadores como
+                        el signo de lo que aparece en ella (Seel, 2010, p.268)
+                    </p>
+                    <p><em>Cuarta idea</em>. El pictograma tiende a ser una representación simbólica figurativa (o imagen) de escasa saturación sintática y sin concisión semántica.</p>
+                    <p class="text-body-secondary">
+                        Según Goodman, la presentación por medio de la imagen posee la propiedad sintáctica de una "saturación" (repletness) relativa: relativamente muchos aspectos del medio significante forman parte esencial de su función
+                        en tanto que signo (a diferencia de una letra, para cuya realización por lo común no importan los detalles) […] [Y por] la cualidad semántica de la "concisión" (succinctness) […] la imagen presenta algo con mucha
+                        mayor abundancia de detalles que una frase (Seel, 2010, pp.248-249).
+                    </p>
+                    <p>A través de un pictograma, como posibilidad de representación simbólica que implica algo de semejanza en su apariencia, podemos enlazar con un objeto figurado o designado.</p>
+                    <h3 class="fs-6 mt-5">Bibliografía</h3>
+                    <p class="small">Husserl, E. (2009). Investigaciones lógicas 2. Alianza Editorial.</p>
+                    <p class="small">Husserl, E. (2013). Ideas relativas a una fenomenología pura y una filosofía fenomenológica. Libro primero: Introducción general a la fenomenología pura. FCE.</p>
+                    <p class="small mb-5">Seel, M. (2010). La estética del aparecer.</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            const data = [
+                { img: "img/picto-1.png", number: 12 },
+                { img: "img/picto-2.png", number: 31 },
+                { img: "img/picto-3.png", number: 71 },
+                { img: "img/picto-4.png", number: 83 },
+                { img: "img/picto-5.png", number: 99 },
+                { img: "img/picto-6.png", number: 82 },
+                { img: "img/picto-7.png", number: 75 },
+                { img: "img/picto-8.png", number: 91 },
+                { img: "img/picto-9.png", number: 71 },
+                { img: "img/picto-10.png", number: 22 },
+            ];
+            let donde = document.querySelector("#aqui");
+
+            data.forEach((d) => {
+                donde.innerHTML +=
+                    '<article class="col" data-score="' +
+                    d.number +
+                    '"><svg width="100%" height="100%" viewBox="0 0 42 42"><circle cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle><circle cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#ddd" stroke-width="2"></circle><circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#000000" stroke-width="2" stroke-dasharray="' +
+                    d.number +
+                    " " +
+                    (100 - d.number) +
+                    '" stroke-dashoffset="25"></circle><text x="50%" y="29" dominant-baseline="middle" text-anchor="middle" font-size="7" font-weight="300">' +
+                    d.number +
+                    '%</text><image x="15" y="10" width="12" height="12" xlink:href="' +
+                    d.img +
+                    '" /></svg></article>';
+            });
+        </script>
+    </body>
+</html>
