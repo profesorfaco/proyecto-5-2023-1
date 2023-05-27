@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>p5u2</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+        <link href="style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="pictogramas" viewBox="0 0 16 16" fill="currentColor">
+                <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5v-1zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1z"
+                />
+                <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5v-1zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"
+                />
+            </symbol>
+            <symbol id="estadisticas" viewBox="0 0 16 16" fill="currentColor">
+                <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0Zm10 11.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-1 0v2.6l-3.613-4.417a.5.5 0 0 0-.74-.037L7.06 8.233 3.404 3.206a.5.5 0 0 0-.808.588l4 5.5a.5.5 0 0 0 .758.06l2.609-2.61L13.445 11H10.5a.5.5 0 0 0-.5.5Z"
+                />
+            </symbol>
+            <symbol id="textos" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M2.5 3a.5.5 0 0 0 0 1h11a.5.5 0 0 0 0-1h-11zm5 3a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-6zm0 3a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-6zm-5 3a.5.5 0 0 0 0 1h11a.5.5 0 0 0 0-1h-11zm.79-5.373c.112-.078.26-.17.444-.275L3.524 6c-.122.074-.272.17-.452.287-.18.117-.35.26-.51.428a2.425 2.425 0 0 0-.398.562c-.11.207-.164.438-.164.692 0 .36.072.65.217.873.144.219.385.328.72.328.215 0 .383-.07.504-.211a.697.697 0 0 0 .188-.463c0-.23-.07-.404-.211-.521-.137-.121-.326-.182-.568-.182h-.282c.024-.203.065-.37.123-.498a1.38 1.38 0 0 1 .252-.37 1.94 1.94 0 0 1 .346-.298zm2.167 0c.113-.078.262-.17.445-.275L5.692 6c-.122.074-.272.17-.452.287-.18.117-.35.26-.51.428a2.425 2.425 0 0 0-.398.562c-.11.207-.164.438-.164.692 0 .36.072.65.217.873.144.219.385.328.72.328.215 0 .383-.07.504-.211a.697.697 0 0 0 .188-.463c0-.23-.07-.404-.211-.521-.137-.121-.326-.182-.568-.182h-.282a1.75 1.75 0 0 1 .118-.492c.058-.13.144-.254.257-.375a1.94 1.94 0 0 1 .346-.3z"
+                />
+            </symbol>
+            <symbol id="licencia" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM5.408 5.89c-.83 0-1.318.64-1.318 1.753v.742c0 1.108.479 1.727 1.318 1.727.69 0 1.138-.435 1.187-1.05h1.147v.114c-.058 1.147-1.029 1.938-2.343 1.938-1.612 0-2.518-1.028-2.518-2.729v-.747c0-1.7.914-2.75 2.518-2.75 1.319 0 2.29.812 2.343 1.999v.11H6.595c-.049-.638-.506-1.108-1.187-1.108Zm5.404 0c-.831 0-1.319.64-1.319 1.753v.742c0 1.108.48 1.727 1.319 1.727.69 0 1.138-.435 1.186-1.05h1.147v.114c-.057 1.147-1.028 1.938-2.342 1.938-1.613 0-2.518-1.028-2.518-2.729v-.747c0-1.7.914-2.75 2.518-2.75 1.318 0 2.29.812 2.342 1.999v.11h-1.147c-.048-.638-.505-1.108-1.186-1.108Z"/>
+            </symbol>
+        </svg>
+        <header class="container">
+            <div class="row py-5">
+                <div class="col-11 mx-auto">
+                    <h1 class="text-center mx-auto">Futuros más justos, equitativos y habitables</h1>
+                    <nav class="my-3 mx-4 py-3 d-flex justify-content-evenly sticky-top">
+                        <a href="index.html" class="btn btn btn-light btn-sm rounded-pill px-3">
+                            <svg class="me-1 mb-1 d-none d-md-inline" width="1em" height="1em"><use href="#pictogramas"></use></svg> Pictogramas
+                        </a>
+                        <a href="estadisticas.html" class="btn btn btn-light btn-sm rounded-pill px-3">
+                            <svg class="me-1 mb-1 d-none d-md-inline" width="1em" height="1em"><use href="#estadisticas"></use></svg> Estadísticas
+                        </a>
+                        <a href="textos.html" class="btn btn btn-dark btn-sm rounded-pill px-3">
+                            <svg class="me-1 mb-1 d-none d-md-inline" width="1em" height="1em"><use href="#textos"></use></svg> Textos
+                        </a>
+                    </nav>
+                    <p class="lead">La Unidad 2 de Proyecto V (Sección 2, Primer Semestre de 2023) le debe mucho a los aportes a la <em>mediación disciplinar especializada en la información y la visualización de la información</em> que hacen hoy <a href="https://odegi.cl/" title="ODEGI — Observatorio de Datos y Estadísticas de Género e Interseccionalidades" target="_blank">Daniela Moyano</a>, <a href="https://www.cigiden.cl/13464-2/" title="Diseñar la información de emergencia | Policy Paper | CIGIDEN" target="_blank">Rodrigo Ramírez</a> y <a href="http://www.ramirezflores.cl/" target="_blank" title="ramirezflores.cl">Sergio Ramírez</a>. También le debe mucho a los clásicos aportes de <a href="https://isotyperevisited.org/" target="_blank" title="Isotype Revisited">ISOTYPE</a>.</p>
+                </div>
+            </div>
+        </header>
+        <main class="container">
+            <div class="row pb-5">
+                <div class="col-11 mx-auto">
+                    
+                    <!--PRIMER TEXTO-->
+                    
+                    <h3 class="display-5">Primero en Viena, luego en La Haya y finalmente en Londres</h3>
+
+                    <h4 class="fs-5 my-3 text-body-secondary">FACO — Mayo de 2023</h4>
+
+                    <p>Esta suele contarse como la historia de un hombre, pero en lo que sigue vamos a contar la historia como de <em>un equipo de tres personas</em>; de Otto, Marie y Gerd. <em>Otto es el que aporta la gran idea en este equipo, pero nada concreto habría aportado a la historia de la visualidad sin Marie, quien fue clave aterrizando tal idea, y Gerd, quien pulió gráficamente lo aterrizado</em>.</p>
+
+                    <p>Partamos por la gran idea. Toda idea tiene su contexto.</p>
+
+                    <p>Para este caso corresponde ubicarnos en los años posteriores a la Primera Guerra Mundial (1914-1918), con una Europa devastada después de la muerte de más de nueve millones de soldados y siete millones de civiles, debido a la sofisticación científica e industrial aplicada a las armas de las potencias involucradas.</p>
+
+                    <p>A tales años agreguemos un proyecto y un lugar más específicos; <em>el Círculo de Viena para la concepción científica del mundo</em>, que fue formado en 1921 para ocuparse principalmente de la lógica y de la elaboración de un lenguaje común a todas las ciencias.</p>
+
+                    <p><em>En tal círculo había un experto en marxismo</em>, lo que es ser experto en buscar lo social en las relaciones en que los humanos participan para vivir; es decir, buscar lo social en el trabajo, actividad en la que lo humano puede reconocerse materialmente (Avendaño et al, 2012). Con esto, la tarea del experto en marxismo es <em>reconstruir la historia de las libertades y las opresiones del hombre en el ámbito de la producción, que es la producción de su vida real, prescindiendo de toda circunstancia abstracta o metafísica</em>. Por su marxismo, resulta muy lógico que sea el mismo experto quien fundara en 1924 el Gesellschafts- und Wirtschaftsmuseum in Wien (Museo de Sociedad y Economía de Viena). <em>Este experto es Otto Neurath (1882-1945), el hombre de la idea que se mueve entre la enciclopedia y la utopía</em> (Stadler, 2011), idea de la que surge el «Método vienés para la educación visual», posteriormente conocida como ISOTYPE (International System of TYpographic Picture Education), <em>que tenía por objetivo fundamental «representar hechos y correlaciones socioeconómicas, especialmente en lo que se refiere a su desarrollo histórico, en un sistema simple de figuras simbólicas fácilmente comprensible»</em> (Stadler, 2011, p.8)</p>
+
+                    <p>Pero no hablaremos sólo de Otto. Nos faltan dos más para contar la historia del equipo.</p>
+
+                    <p>Para encontrarnos con la mujer del equipo corresponde llegar a 1925, un año después de que el Museo de Sociedad y Economía de Viena fuera fundado para comunicar al público el programa de reforma social de la ciudad. En tal año comienza a trabajar en tal museo una mujer llamada <em>Marie Reidemeister (1898-1986) quien</em>, más tarde y por esa rancia costumbre de adoptar el apellido del esposo, <em>será conocida como Marie Neurath</em>. Marie estudió matemáticas y física mientras tomaba, paralelamente, cursos en la Kunstschule (escuela de arte). Con tales estudios ella pudo hacerse de las herramientas para desempeñar una labor que, hasta entonces, no tenía nombre; era <em>la labor de comprender los datos, obtener toda la información necesaria de quien fuera persona experta, decidir qué debe transmitirse al público, cómo hacerlo comprensible, cómo relacionarlo con el conocimiento general o con la información ya facilitada en otros gráficos. El nombre que la misma Marie propuso para tal labor fue el de «transformer»</em>. Y reconociéndose a ella misma como «transformer», se exigía recordar y cumplir ciertas reglas, añadiendo nuevas variaciones, siempre evitando distracciones innecesarias, para elaborar borradores de gráficas en los que decidía títulos, tipos, disposiciones de elementos, números, colores y demás símbolos, como si se tratara de un plano a partir del cual trabajaría un artista gráfico (Franchi, 2013).</p>
+
+                    <p>Y nos queda el tercer integrante del equipo, quien tomaba los planos aportados por Marie desde su labor de «transformer». Para encontrarnos con tal integrante tenemos que avanzar al año 1928, cuando Otto Neurath reclutó a <em>Gerd Arntz (1900-1988)</em> como cabeza del equipo de arte y diseño del Museo de Sociedad y Economía de Viena, trayéndolo desde Düsseldorf, Alemania, donde este artista era reconocido por colaborar con publicaciones de izquierda con fuerte inspiración social y compromiso político tendiente a una forma de Estado radicalmente socialista basada en la democracia popular directa; <em>colaboraba representando la vida de los trabajadores y la lucha de clases con figuras abstractas reproducidas en xilografías. Representaciones que aportaron el ingrediente que faltaba al Método Vienés que más tarde fue International System: diseñar signos elementales y pictogramas que pudieran representar temas concretos que fueran comprensibles con un mero vistazo</em>.</p>
+
+                    <p>Entre finales de 1920 y principios de 1930, Viena era una ciudad con un gobierno socialista y un centro de referencia internacional de la vivienda social y la emancipación obrera. Las ideas de Otto, la transformación de Marie y el arte comprometido de Gerd encajaban perfectamente en y para este contexto que vió surgir proyectos tales como la colección Gesellschaft und Wirtschaft (1930), donde 100 láminas mostraba, cada una, el aspecto más importante de un tema, sin necesidad de una segunda o más miradas. El éxito de la colección le significó al grupo una invitación a Unión Soviética para apoyar la creación del IZOSTAT (ИЗОСТАТ) una agencia del gobierno soviético en donde se diseñaban, creaban, publicaban y distribuían representaciones gráficas de la industria local, que, sin explicaciones escritas, resultaban fácilmente comprensibles.</p>
+
+                    <p>Pero las cosas cambian en Viena para 1934, año en que su gobierno socialista cae por influencia de la Alemania Nazi. Una influencia que cuatro años más tarde se transformaría en la Anschluss (conexión; eufemismo para la expansión territorial del Tercer Reich).</p>
+
+                    <p>Fue por eso que Otto, Marie y Gerd tuvieron que emigrar a La Haya, donde ese proyecto local y vienés, de Ilustración socialista, se convirtió en un proyecto internacional, intelectual y sociopolítico, bajo el nombre de Fundación Internacional para la Educación Visual de La Haya.</p>
+
+                    <p>En tal ciudad de los Países Bajos, Otto y Marie comienzan a tener la intención de convertirse en los Neurath, intención que no se pudo consumar allí en tanto Otto era considerado ciudadano alemán y "medio judío", y por tal condició no podía casarse con su "aria" ayudante Marie Reidemeister. La persecusión y prohibiciones impuestas por los Nazis contra los ciudadanos “medio judíos” da razón a que el grupo se separe en 1940; <em>Otto y Marie huyeron a Inglaterra</em>. Gerd se quedó en La Haya, trabajando para la Fundación Holandesa de Estadística.</p>
+
+                    <p><em>En Inglaterra, los Neurath crean el Instituto ISOTYPE</em>. Y sin que pasara mucho tiempo, Marie enviudó (1945). Pero ella, junto al equipo del Instituto, continuó con su trabajo por dos décadas más.</p>
+
+                    <p>En 1971, cuando el Instituto estaba poniendo fin a sus actividades comerciales, Marie Neurath decidió donar su archivo de materiales de trabajo al Departamento de Tipografía y Comunicación Gráfica de la Universidad de Reading. Y es tal decisión la que nos ha permitido conocer, en estas líneas, algo de tal historia que es clave para el diseño de información y el diseño visual de información.</p>
+
+                    <dl class="small pt-2 pb-5 text-body-secondary">
+                        <dt class="mb-2">Referencias</dt>
+                        <dd>Avendaño et al (2012). Sociología. Introducción a los clásicos. K. Marx, E. Durkheim, M. Weber. LOM.</dd>
+                        <dd>Franchi, Francesco (2013). Designing News. Changing the World of Editorial Design and Information Graphics. Gestalten.</dd>
+                        <dd>Gerd Arntz web archive. En línea: <a href="http://www.gerdarntz.org/" target="_blank">http://www.gerdarntz.org/</a></dd>
+                        <dd>Isotype revisited. En línea: <a href="https://isotyperevisited.org/" target="_blank">https://isotyperevisited.org/</a></dd>
+                        <dd>Stanford Encyclopedia of Philosophy. Otto Neurath. En línea: <a href="https://plato.stanford.edu/entries/neurath/" target="_blank">https://plato.stanford.edu/entries/neurath/</a></dd>
+                    </dl>
+
+                    <!--SEGUNDO TEXTO-->
+                    
+                    <h3 class="display-5">Puedes viajar más lejos montado en los logros de quienes te han precedido</h3>
+                    
+                    <h4 class="fs-5 my-3 text-body-secondary">FACO — Mayo de 2023</h4>
+                    
+                    <p><em>Por distintas fuentes llegamos a la relevancia de los aportes de los Neurath y Arntz</em>. Paul Mijksenaar dice que, por su considerable valor gráfico, ISOTYPE sigue siendo una importante fuente de inspiración para diseñadores gráficos (2001). Mario Casanueva, por su parte, escribe que</p>
+
+                    <blockquote>ISOTYPE […] [es] antecedente directo de la señalización internacional de aeropuertos, hoteles y centros de recreo [...] también [...] de los íconos usados para representar los deportes olímpicos y de la señalización de las líneas del metro de la Ciudad de México. En general, buena parte de la simbología empleada hoy en la presentación de información estadística deriva directamente de los trabajos de Neurath y sus colaboradores. (2009, p.221)</blockquote>
+
+                    <p>En lo último, sobre la representación de información, hay coincidencia entre Casanueva y Mijksenaar, cuando el último también indica que ISOTYPE contribuyó «de modo indirecto, al desarrollo de la “infográfica” que cada vez es más popular en periódicos y revistas» (2001, p.30).</p>
+
+                    <p><em>¿Acaso todos les copian? Si ¿Y cuál es el problema? Como dice Juan Guillermo Tejeda (2006), en algún momento desventurado de nuestra historia cultural reciente se consagró el desprestigio de la copia</em>. Se supone que el auténtico creativo no copia, que no le debe nada a nadie, y con eso acumula, sin mayor resultado práctico, pura originalidad. <em>Pero la copia es «una forma de solidaridad o de simpatía, un signo de modestia, una herramienta para vivir en sintonía con una tradición y con el medio. Cada cual copia según su genio y talante. Un mundo sin copia es tan inconcebible como un mundo sin originalidad»</em> (Tejeda, 2006, p.92).</p>
+
+                    <p>Pero copiemos más que los «tics, recursos inevitables, idénticos ángulos, colores y trucos» (Tejeda, 2006, p.89) según lo que esté de moda. Eso no aporta la altura que sí aportan los hombros de gigantes desde donde la vista es mucho mejor.</p>
+
+                    <p>Para tener plena conciencia de la altura de los gigantes que nos conviene copiar, demos unos pasos más atrás para apuntar, con Alexandre Kojève (2007), que podemos distinguir cuatro tipos de pinturas representativas más o menos subjetivas y abstractas: expresionistas, impresionistas, realistas y simbólicas.</p>
+
+                    <p>Entre tales tipos quedémonos con el de la pintura simbólica, donde no tenemos una representación exacta o realista, sino una esquemática, lo que implica una última reducción del subjetivismo:</p>
+
+                    <blockquote>el esquema no se remite ni a la actitud personal del pintor, ni a la impresión visual que sobre él produce el objeto, ni tampoco al aspecto visual que ofrece el objeto a los ojos de los que lo ven, sino al objeto en sí mismo, independiente del cómo de su aparición en una visión concreta. Por ejemplo, nadie ve el rostro representado por una pintura egipcia, en el que el ojo está representado de frente y la nariz de perfil (2007, p.37).
+                    </blockquote>
+
+                    <p><em>Podría ser que en el talento de Gerd Arntz, operando al modo de una pintura simbólica, y en la influencia de ISOTYPE, esté la razón de pensar en el pictograma como una representación esquemática «de escasa saturación sintáctica y sin concisión semántica»</em> (Seel, 2010, p.253) y rara vez pensarlo como una fotografía de un león melenudo en la puerta del baño de hombres siendo usado como pictograma. Más que omitir la importancia del aspecto particular de la imagen al verla, la omitimos al crearla, para que otros, al verla, no tengan particularidades en las que demorarse y rápidamente remitan al objeto representado en sí mismo.</p>
+
+                    <dl class="small pt-2 pb-5 text-body-secondary">
+                        <dt class="mb-2">Referencias</dt>
+                        <dd>Casanueva (2009). Transmisión visual del conocimiento. En: Casanueva & Bolaños (Coords.). El giro pictórico. Epistemología de la imagen. Anthropos.</dd>
+                        <dd>Kojève (2007). Kandinsky. Abada Editores.</dd>
+                        <dd>Mau (1998). El Manifiesto incompleto para el crecimiento. En línea: <a href="https://medium.com/@galimatias.mx/un-manifiesto-incompleto-para-el-crecimiento-de-bruce-mau-ec1ae9e6f6f1" target="_blank">https://tinyurl.com/5n6buuw2</a></dd>
+                        <dd>Mijksenaar (2001). Una introducción al Diseño de la información. Gustavo Gili.</dd>
+                        <dd>Seel (2010). Estética del aparecer. Katz editores.</dd>
+                        <dd>Tejeda (2016). Diccionario crítico del diseño. Gustavo Gili.</dd>
+                    </dl>
+
+                    <!--TERCER TEXTO-->
+                    
+                    <h3 class="display-5">Los desastres naturales no existen</h3>
+                    
+                    <h4 class="fs-5 my-3 text-body-secondary">FACO — Mayo de 2023</h4>
+                    
+                    <p><em>Los desastres son siempre el resultado de las acciones y las decisiones humanas</em>, es lo que escribe Luis Burón (2020) justo antes de recordar el fragmento de una carta que <em>Jean-Jacques Rousseau escribió a Voltaire</em> con motivo del <em>terremoto de Lisboa en 1755</em>:</p>
+
+                    <blockquote>«convenga usted que la naturaleza no construyó las 20 mil casas de seis y siete pisos, y que, si los habitantes de esta gran ciudad hubieran vivido menos hacinados, con mayor igualdad y modestia, los estragos del terremoto hubieran sido menores, o quizá inexistentes».</blockquote>
+
+                    <p><em>Decir que los desastres naturales no existen</em> está lejos de ser una paparrucha negacionista. Decirlo <em>es invitar a afinar los conceptos para reflexionar sobre hechos y responsabilidades</em>.</p>
+
+                    <p>Como se indica en el El Marco de Sendai (ONU, 2015), <em>lo que existen son las amenazas/peligros</em> que incluyen condiciones latentes <em>que pueden tener origen natural</em> (geológico, hidrometeorológico y biológico) <em>o antrópico</em> (degradación ambiental y amenazas tecnológicas).</p>
+
+                    <p>Tales condiciones latentes pueden afectar la vida social chilena irrumpiendo como sismos, erupciones volcánicas, remociones en masa, sistemas frontales o incendios forestales.</p>
+
+                    <p>Pero, por ejemplo, un sismo no es en sí un desastre; es un natural acomodo de placas tectónicas que luego podría implicar una emergencia menor, emergencia mayor, desastre o catástrofe, según «la extensión de la zona afectada, la cantidad de personas afectadas o potencialmente afectadas y la capacidad de respuesta de los niveles administrativos involucrados» (Artículo 2. LEY NÚM. 21.364).</p>
+
+                    <p>Si desde un sismo se llega a provocar una «situación con un nivel de afectación e impacto que no permite ser gestionada con capacidades regionales, y requiere refuerzos o apoyos desde otras zonas del país, a través de una coordinación de nivel nacional» (Ibíd.), podríamos referirnos a lo provocado como un desastre socio-natural.</p>
+
+                    <p><em>Afinando los conceptos</em> se puede decir que los sismos no se previenen, pero los desastres sí, y por eso <em>en Chile existen, por ejemplo, SINAPRED (SIstema NAcional de Prevención y REspuestas ante Desastres), CITRID (Programa de Reducción de Riesgos y Desastres de la Universidad de Chile) y CIGIDEN (Centro de Investigación para la Gestión Integrada del Riesgo de Desastres)</em>.</p>
+
+                    <p>Si nos quedamos con CIGIDEN, basta con mencionar sus 3 áreas y 6 líneas de investigación para tener idea de las complejidades involucradas en la investigación de las acciones y las decisiones humanas relacionadas con los desastres socio-naturales; primer área es la de Identificación de amenazas, con las líneas de [1] Amenazas por procesos de tierra sólida, [2] Amenazas por procesos de aguas superficiales y [3] Riesgo y resiliencia en sistemas complejos y redes. Segunda área es la de Análisis de riesgo y mitigación, con las líneas de [4] Cultura del desastre y gobernanza del riesgo, y [5] Evaluación socioeconómica para la mitigación del riesgo de infraestructura crítica. La tercera es la de Respuesta individual y la de la sociedad, con la línea de investigación de [6] Gobernanza ciudadana.</p>
+
+                    <p>Podemos acercar tal complejidad al diseño de información y diseño visual de información a través de una publicación que forma parte de la Serie Policy Papers CIGIDEN: <em>Diseñar la información de emergencia: Experiencias para gestionar el riesgo y educar la resiliencia (Ramírez, 2020)</em>, donde se nos presenta <em>un gran desafío: Asegurar respuesta clara y distinta a «qué se presenta, qué se entiende, cómo se completa o qué se hace»</em> (pp.12-13) incluso en momentos de máxima tensión cognitiva, <em>y también se nos presenta una gran oportunidad: «un momento óptimo para entregar información es previo a la situación de emergencia»</em> (p.11), <em>cuando es posible «involucrar, dialogar y adaptar las soluciones a lo que las comunidades requieren, incorporando diseño para transformar integralmente la gestión del riesgo, lo que permitirá abordar horizontalmente políticas apuntadas a educar, preparar o prevenir»</em> (pp.18-19).</p>
+
+                    <p><em>Y podría ser necesario ir más allá de la información de emergencia relacionada con las amenazas/peligros de condiciones latentes que tienen origen natural, para incluir las antrópicas como desafío para quienes se titularán de diseñadoras y diseñadores cerca del año 2025</em>, quienes tendrán que salvar sus circunstancias entre los estragos de la mundialización. Estragos de la acción acumulada de las guerras, los fracasos del desarrollo económico y la mutación climática que hoy son razón del retorno, la extensión y la amplificación de los migrantes lanzados a la búsqueda de un territorio habitable para ellos y para sus hijos (Latour, 2021), sobre capas geológicas compuestas por residuos de plástico y otros tecnofósiles.</p>
+
+                    <dl class="small pt-2 pb-5 text-body-secondary">
+                        <dt class="mb-2">Referencias</dt>
+                        <dd>Barrenechea, F. (2020). Atlas de amenazas y desastres en Chile. Universidad Bernardo O'Higgins & Instituto Panamericano de Geografía e Historia.</dd>
+                        <dd>Burón, L. (2020). El poder de las palabras: los desastres no son naturales. En línea: <a href="https://www.undrr.org/es/news/el-poder-de-las-palabras-los-desastres-no-son-naturales" target="_blank">https://www.undrr.org/es/news/el-poder-de-las-palabras-los-desastres-no-son-naturales</a></dd>
+                        <dd>Ley número 21.364 de 2021. Establece el Sistema Nacional de Prevención y Respuesta ante Desastres, sustituye la Oficina Nacional de Emergencia por el Servicio Nacional de Prevención y Respuesta ante Desastres, y adecúa normas que indica. 7 de agosto de 2021. D.O. No. 43022. En línea: <a href="https://bcn.cl/2qtdx" target="_blank">https://bcn.cl/2qtdx</a>
+                        </dd>
+                        <dd>Latour, B. (2021). Dónde aterrizar. Cómo orientarse en política. Taurus.</dd>
+                        <dd>ONU: Oficina de las Naciones Unidas para la Reducción del Riesgo de Desastres. (2015). Marco de Sendai para la Reducción del Riesgo de Desastres. 2015-2030. En línea: <a href="https://www.refworld.org.es/docid/5b3d419f4.html" target="_blank">https://www.refworld.org.es/docid/5b3d419f4.html</a></dd>
+                        <dd>Peña, P. (2023) Tecnología para un planeta en llamas. Los peligros del tecnocapitalismo y la necesidad de una transición digital justa en la era de la crisis climática y ecológica. Paidós</dd>
+                        <dd>Ramírez, R. (2020). Diseñar la información de emergencia: Experiencias para gestionar el riesgo y educar la resiliencia. Serie Policy Papers CIGIDEN. En línea: <a href="https://www.cigiden.cl/policy-papers/" target="_blank">https://www.cigiden.cl/policy-papers/</a></dd>
+                    </dl>
+
+                    <!--CUARTO TEXTO-->
+                    
+                    <h3 class="display-5">Desde las estadísticas de género al feminismo de datos</h3>
+                    
+                    <h4 class="fs-5 my-3 text-body-secondary">FACO — Mayo de 2023</h4>
+                    
+                    <p>En Chile, actualmente el Instituto Nacional de Estadísticas (INE) y el Ministerio de la Mujer y la Equidad de Género (MMEG) coordinan la Subcomisión de Estadísticas de Género (SEG). <em>El objetivo de la SEG es coordinar, orientar técnicamente, sistematizar y promover la producción y análisis de estadísticas de género</em>. La SEG se encuentra compuesta por 14 Ministerios y Servicios del Estado que ponen a disposición de la ciudadanía un conjunto de indicadores de género que son actualizados de manera periódica.</p>
+
+                    <p>Gracias a la SEG podemos aprender, por ejemplo, que en el año 1990 la brecha de género entre Ministros y Ministras de Estado en Chile era grosera: Con 18 cargos en total, 18 le correspondían a Ministros y 0 a Ministras. Recién en el año 2006, cuando el número de ministerios de la Presidente Bachelet era 20, existió una paridad real, con 10 Ministros y 10 Ministras. Desde tal año a la actualidad la disparidad cargada al macho volvió a evidenciarse en el año 2011, cuando los 22 puestos totales eran ocupados por 18 Ministros y apenas 4 Ministras (esto en el primer gobierno de Piñera, entre los años 2010 y 2014). Más recientemente, en los años 2020 y 2021, se insistió en la disparidad con 24 puestos totales donde 17 estaban a cargo de Ministros y 7 a cargo de Ministras (años que corresponden al segundo gobierno de Piñera, sufrido entre 2018 y 2022).</p>
+
+                    <p><em>Pero la SEG no es la única que nos ofrece estadísticas al tiempo que nos advierte de las brechas de género. También está el Observatorio de Datos y Estadísticas de Género e Interseccionalidades (ODEGI)</em> que ha visibilizado, entre otras cosas, que en Chile 99% de abortos se realizan en clandestinidad, 4 de cada 10 mujeres han sido víctimas de violencia intrafamiliar, más de 1.200.000 mujeres no reciben remuneración por realizar labores de cuidados, y que, a nivel mundial, se necesitarán 275 años para cerrar la brecha salarial de género. Para ver estos y más datos que indignan, pueden visitar <a href="https://datosqueindignan.odegi.cl/" class="link-dark" target="_blank">https://datosqueindignan.odegi.cl/</a></p>
+
+                    <p><em>La diferencia entre la SEG y el ODEGI está en la posibilidad del Observatorio de avanzar de la estadística de género al feminismo de datos</em>. Avanzar de visualizar tales datos, con algo de «big data», a denunciar el «big dick data». Una denuncia que aprovecha uno de varios conceptos aportados por Catherine D'Ignazio y Lauren F. Klein, autoras de Data Feminism (2020), conceptos que fueron traducidos al castellano en Feminismo de Datos (2023) gracias al trabajo liderado por DataGénero, Observatorio de Datos con Perspectiva de Género (Argentina). Trabajo cuyo resultado se puede leer en <a href="https://data-feminism.mitpress.mit.edu/bienvenida" class="link-dark" target="_blank">https://data-feminism.mitpress.mit.edu/bienvenida</a>
+                    </p>
+
+                    <p>En Feminismo de datos (2023) «el término feminismo [es utilizado] como abreviatura de los diversos y amplios proyectos que nombran y desafían el sexismo y otras fuerzas de opresión, así como los que buscan crear <mark>futuros más justos, equitativos y habitables</mark>».</p>
+
+                    <p>Otro término que nos conviene consultar en Feminismo de Datos (2023), cuando buscamos la diferencia del ODEGI, es el de interseccionalidad, que «no solo describe los aspectos que se entrecruzan en la identidad de una persona en particular (o posicionalidades, como a veces se les llama). También describe las fuerzas de privilegio y opresión que se entrecruzan en una sociedad determinada».</p>
+
+                    <p>Con lo dicho se podrá comprender que el feminismo de datos al que puede avanzar el ODEGI, y <em>también podrían avanzar estudiantes de diseño de la Universidad de Chile en un curso sobre diseño de Información y diseño visual de información, implica un compromiso con la co-liberación de los sistemas de poder opresivos que no solo hay que comprender, sino también desafiar y transformar</em>.</p>
+
+                    <dl class="small pt-2 pb-5 text-body-secondary">
+                        <dt class="mb-2">Referencias</dt>
+                        <dd>D'Ignazio, C. & Klein, L.F. (2023) Feminismo de datos. En línea: <a href="https://data-feminism.mitpress.mit.edu/bienvenida" target="_blank">https://data-feminism.mitpress.mit.edu/bienvenida</a></dd>
+                        <dd>Estadísticas de Género | Subcomisión de Estadísticas de Género (SEG). En ínea: <a href="https://www.estadisticasdegenero.cl/" target="_blank">https://www.estadisticasdegenero.cl/</a></dd>
+                        <dd>La Voz De Los Que Sobran (2022) Chile: Observatorio advierte que 99% de abortos se realizan en clandestinidad y que 4 de cada 10 mujeres han sufrido violencia intrafamiliar. En línea: <a href="https://tinyurl.com/4v3xxy4t" target="_blank">https://tinyurl.com/4v3xxy4t</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </main>
+        <aside class="bg-light bg-gradient border-top border-light">
+            <div class="container">
+                <div class="row pt-5 pb-4">
+                    <div class="col-11 mx-auto">
+                        <p class="small text-body-secondary">
+                            <em>Proyecto V</em> · Sección 2 · Primer Semestre de 2023 · <em>Estudiantes</em> · Michelle Astrelli · Consuelo Bahamondes · Lucía Barnier · Angela Beltrán · Martín Bustos · Ana Sofía Carrasco · Nicolás Castro ·
+                            Javiera Cerda · Lucas Echeverría · Martina Flores · Emilia Gálvez · Sofía Guzmán · Aníbal Lobos · Bastián Lobos · America Merino · Antonia Morales · Janis Navarrete · Alondra Núñez · Catalina Pacheco · Angela
+                            Pizarro · Daniela Quijada · Maria-Ignacia Quiroga · Isidora Retamal · Dariel Rojas · Carolina Rubio · Josefa Rubio · Cristofer Seguel · Consuelo Valdivia · Sergio Venegas · Valentina Villagrán · Mei-Shuen Wu ·
+                            Catalina Yapur · <em>Ayudantes</em> · Josefa Birkelbach · Luciana Oropesa · <em>Profesor</em> · <a href="https://faco.cl/" target="_blank">FACO</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <footer class="bg-dark text-white">
+            <div class="container">
+                <div class="row pt-3 pb-2">
+                    <div class="col-12">
+                        <p class="text-center"><svg class="me-2" width="1em" height="1em"><use href="#licencia"></use></svg><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" class="link-light small">Atribución-NoComercial-CompartirIgual 4.0 Internacional</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    </body>
+</html>
