@@ -41,6 +41,10 @@ a {
     text-decoration: none;
 }
 
+a.link-dark{
+    text-decoration: underline;
+}
+
 nav a {
     font-weight: 600;
 }
@@ -57,7 +61,11 @@ nav a.aqui {
     line-height: 1.1 !important;
     margin-left: -0.1rem;
     letter-spacing: -0.05rem;
-    max-width: 80%;
+    max-width: 75%;
+}
+
+@media (orientation: portrait) {
+.display-5{max-width: 90%;}
 }
 
 dd a{
