@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 85.06 86.19">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #010101;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #010101;
+        stroke-miterlimit: 10;
+        stroke-width: 1.5px;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <path class="cls-2" d="m32.4,31.02c-.46,2.17-1.42,4.64-1.89,6.81,2.46.43,5.84,1.23,9.62,2.86,3.13,1.35,11,4.73,10.58,6.98-.7,3.75-23.38-1.08-25.91-2.61-1.71-1.03-2.15-2.42-2.15-2.42-.11-.36-.16-.75-.16-1.14.06-6.53,1.11-23.3,10.5-23.03,11.65.34,45.75,22.32,44.23,26.61s-28.36-9.27-28.36-9.27c-.23,1.83-.45,3.66-.68,5.49"/>
+  <path class="cls-1" d="m41.26,6.64c1.14-4.46,5.62-6.8,9.16-5.55,2.83,1,4.81,4.2,4.47,7.74,1.82,1.05,3.64,2.1,5.46,3.15.72.48.45,1.6-.4,1.7-1.24.15-3.48-.08-7.54-1.38-9.12-2.92-11.14-5.67-11.14-5.67Z"/>
+  <path class="cls-2" d="m41.12,8.14l-3.21,6.87c5,4,10.43,4.52,12.83,2.23.45-.43,1.38-1.52,1.52-3.86l-11.14-5.24Z"/>
+  <rect class="cls-2" x=".75" y="62.78" width="12.66" height="5.49"/>
+  <rect class="cls-2" x="13.41" y="62.78" width="12.66" height="5.49"/>
+  <rect class="cls-2" x="26.07" y="62.78" width="12.66" height="5.49"/>
+  <rect class="cls-2" x="38.73" y="62.78" width="12.66" height="5.49"/>
+  <rect class="cls-2" x="51.39" y="62.78" width="12.66" height="5.49"/>
+  <rect class="cls-2" x="64.22" y="62.78" width="12.66" height="5.49"/>
+  <rect class="cls-2" x="71.65" y="57.11" width="12.66" height="5.49"/>
+  <rect class="cls-2" x="63.04" y="50.76" width="12.66" height="5.49"/>
+  <path class="cls-2" d="m77.06,44.75h6.54v5.49h-12.66c-.02-1.57-.04-3.14-.06-4.71"/>
+  <rect class="cls-2" x="58.31" y="56.77" width="12.66" height="5.49"/>
+  <rect class="cls-2" x="45.15" y="56.77" width="12.66" height="5.49"/>
+  <rect class="cls-2" x="32.66" y="56.77" width="12.66" height="5.49"/>
+  <rect class="cls-2" x="58.3" y="68.44" width="12.66" height="5.49"/>
+  <rect class="cls-2" x="45.13" y="68.44" width="12.66" height="5.49"/>
+  <rect class="cls-2" x="33.31" y="68.44" width="12.66" height="5.49"/>
+  <rect class="cls-2" x="20.32" y="68.44" width="12.66" height="5.49"/>
+  <rect class="cls-2" x="8.33" y="68.44" width="12.66" height="5.49"/>
+  <rect class="cls-2" x="1.24" y="74.45" width="12.66" height="5.49"/>
+  <rect class="cls-2" x="13.36" y="74.45" width="12.66" height="5.49"/>
+  <rect class="cls-2" x="25.86" y="74.45" width="12.66" height="5.49"/>
+  <rect class="cls-2" x="38.52" y="74.45" width="12.66" height="5.49"/>
+  <rect class="cls-2" x="51.01" y="74.45" width="12.66" height="5.49"/>
+  <rect class="cls-2" x="63.5" y="74.45" width="12.66" height="5.49"/>
+  <rect class="cls-2" x="58.56" y="79.95" width="12.66" height="5.49"/>
+  <rect class="cls-2" x="45.23" y="79.95" width="12.66" height="5.49"/>
+  <rect class="cls-2" x="31.55" y="79.95" width="12.66" height="5.49"/>
+  <rect class="cls-2" x="18.89" y="79.95" width="12.66" height="5.49"/>
+  <rect class="cls-2" x="5.81" y="79.95" width="12.66" height="5.49"/>
+  <path class="cls-1" d="m54.43,42.69v7.55c.97.11,2.42.22,4.16.06.55-.05,7.37-.71,7.65-2.8.23-1.73-4.07-4.08-7.81-4.71-1.64-.28-3.04-.21-4.01-.09Z"/>
+  <line class="cls-2" x1="53.9" y1="46.38" x2="50.84" y2="46.38"/>
+  <line class="cls-2" x1="27.93" y1="46.15" x2="26.83" y2="60.92"/>
+  <line class="cls-2" x1="48.19" y1="50.35" x2="48.19" y2="54.88"/>
+</svg>
